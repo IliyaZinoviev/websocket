@@ -1,0 +1,19 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "websocket"
+  },
+  "author": "Iliya Zinoviev",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {}
+}
