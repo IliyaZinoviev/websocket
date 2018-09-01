@@ -2,7 +2,8 @@
 var socket = new WebSocket("ws://localhost:5000");
 
 // отправить сообщение из формы publish
-document.forms.publish.onsubmit = function() {
+document.forms.publish.onsubmit = function(e) {
+  e.preventDefault();
   socket.send(this.message.value);
   return false;
 };
