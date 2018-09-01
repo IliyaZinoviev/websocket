@@ -1,5 +1,5 @@
 // создать подключение
-var socket = new WebSocket("ws://localhost:3000");
+var socket = new WebSocket("ws://localhost:5000");
 
 // отправить сообщение из формы publish
 document.forms.publish.onsubmit = function() {

@@ -17,12 +17,11 @@ var server = http.createServer(function(request, response){
             return;
         })
     }
-}).listen(3000, () => {console.log('server work on 3000')});
+}).listen(process.env.PORT || 5000, () => {console.log('server work')});
 
 // подключенные клиенты
 var clients = {};
 
-// WebSocket-сервер на порту 8081
 var webSocketServer = new WebSocketServer.Server({
     server: server
 });
