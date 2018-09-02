@@ -1,7 +1,8 @@
 var http = require("http");
 var fs = require("fs");
 var WebSocketServer = new require('ws');
- 
+const PORT = process.env.PORT || 3000;
+
 var server = http.createServer(function(request, response){
     console.log(`Запрошенный адрес: ${request.url}`);
     if(request.url.startsWith("/public/")){
@@ -17,7 +18,7 @@ var server = http.createServer(function(request, response){
             return;
         })
     }
-}).listen(process.env.PORT || 5000, () => {console.log('server work')});
+}).listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 // подключенные клиенты
 var clients = {};

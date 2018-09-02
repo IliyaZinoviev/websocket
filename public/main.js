@@ -1,5 +1,6 @@
+const HOST = location.origin.replace(/^http/, 'ws')
 // создать подключение
-var socket = new WebSocket("ws://localhost:5000");
+var socket = new WebSocket(HOST);
 
 // отправить сообщение из формы publish
 document.forms.publish.onsubmit = function(e) {
