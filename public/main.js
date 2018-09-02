@@ -4,6 +4,7 @@ var socket = new WebSocket(HOST);
 
 // отправить сообщение из формы publish
 document.forms.publish.onsubmit = function() {
+  e.preventDefault();
   socket.send(this.message.value);
   return false;
 };
